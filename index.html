@@ -3,28 +3,41 @@
     <head>
         <meta charset="utf-8">
         <title>Detectando el lenguaje del navegador</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: #f2f3f4;
+            }
+
+            .container {
+                display: flex;
+                height: 600px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 3em;
+                color: #E74C3C;
+            }
+        </style>
     </head>
     
     <body>
-        <h1>Hola Mundo</h1>
-        <p>Detactando le lenguaje del navegador</p>
+        <div class="container">
+            <h1>Detectando el lenguaje de tu navegador</h1>    
+        </div>        
         
         <script> 
             const lang = getLanguage()
-            
-            switch(lang) {
-                
-                case 'es':
-                    document.location.href = 'https://inbound.digifianz.com/'
-                    break
-                    
-                case 'en':
-                    document.location.href = 'https://inbound.digifianz.com/en'
-                    break
-                    
-                default:
-                    document.location.href = 'https://inbound.digifianz.com/'
-            }
+
+            alert('El idioma de tu navegador es: ' + lang)
+            console.log(lang)
             
             function getLanguage() {
                 
@@ -60,8 +73,7 @@
                     }
                 }
 
-                return lang
-                
+                return lang                
             }
         </script>
     </body>
